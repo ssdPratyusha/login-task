@@ -1,0 +1,56 @@
+
+ 
+ 
+
+ <div class="container ">
+    <div class="row">
+        
+        <div class="col-md-6">
+             <div id="backgrnd">
+            <h1>Login page</h1>
+          
+            <form [formGroup]="LoginForm"  (ngSubmit)="onSubmit()">
+           
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            
+                            <input type="text" formControlName="UserName" placeholder="UserName" class="form-control"
+                              >
+                            <span class="text-danger" *ngIf='f.UserName.invalid && (f.UserName.touched ||submitted)'>UserName is mandatory</span>
+                        </div>
+                    </div>
+                </div>
+              
+              
+                <div class="row">
+                    <div class="col-sm-6">
+                        
+  
+                        <input formControlName='password' class="form-control"  placeholder="password"><br>
+  <span class="text-danger" *ngIf='f.password.invalid&&(f.password.touched ||submitted)'>Password is mandatory</span>
+                    </div>
+                </div>
+                
+                
+           
+                <button       type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <div class="col-sm-8">
+              <button type="submit" class="btn btn-primary"  (click)="newChange()"  style="float:right;">Register</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <router-outlet></router-outlet>
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
